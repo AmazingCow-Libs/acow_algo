@@ -33,7 +33,7 @@ template <typename ContainerSource,
           typename ContainerDestination,
           typename Inserter = std::back_insert_iterator<ContainerDestination>>
 inline void
-copy(
+copy_insert(
     const ContainerSource &source,
     ContainerDestination  &destination) noexcept
 {
