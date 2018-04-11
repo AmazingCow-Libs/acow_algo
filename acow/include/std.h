@@ -7,7 +7,7 @@
 //                    |   _   ||     |_ |       ||   _   |                    //
 //                    |__| |__||_______||_______||__| |__|                    //
 //                             www.amazingcow.com                             //
-//  File      : something.h                                                   //
+//  File      : std.h                                                         //
 //  Project   : acow_algo                                                     //
 //  Date      : Mar 08, 2018                                                  //
 //  License   : GPLv3                                                         //
@@ -15,7 +15,7 @@
 //  Copyright : AmazingCow - 2018                                             //
 //                                                                            //
 //  Description :                                                             //
-//                                                                            //
+//    Algorithms that mimics the standard ones.                               //
 //---------------------------------------------------------------------------~//
 
 #pragma once
@@ -111,7 +111,9 @@ remove_if(
 
     // Erase the stuff remove, and return the
     // std::end(container) to indicate this.
-    container.erase(it);
+    if(it != std::end(container))
+        container.erase(it);
+
     return std::end(container);
 }
 
